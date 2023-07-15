@@ -1,0 +1,635 @@
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+@import url('bg.css');
+
+:root {
+
+    /* Color Palette */
+    --primary1: #663252;
+    --primary2: #835370;
+    --primary3: #AE839E;
+    --primary4: #E8C4DA;
+    --primary5: #F1DCE9;
+    --primary6: #F8EDF4;
+    --primary7: #FDF9FB;
+    --white: #FFFFFF;
+    --secondary1: #0D0D0D;
+    --secondary2: #262626;
+    --secondary3: #4C4C4C;
+    --secondary4: #7F7F7F;
+    --secondary5: #B2B2B2;
+    --secondary6: #D9D9D9;
+    --secondary7: #F2F2F2;
+    /* Box Shadow */
+    --lightshadow: 9px 4px 51px 0px rgba(174, 131, 158, 0.10), 2px 4px 18px 0px rgba(174, 131, 158, 0.05);
+    --darkshadow: 11px 20px 52px 0px rgba(174, 131, 158, 0.30), 2px 4px 18px 0px rgba(174, 131, 158, 0.10);
+    --buttonshadow: 0px 0px 5px 0px rgba(174, 131, 158, 0.20), 0px 4px 11px -1px rgba(174, 131, 158, 0.25);
+    --fieldshadow: 0px 0px 4px 0px rgba(232, 196, 218, 0.50);
+
+    /* Typesize */
+    --title: 64px;
+    --xxl: 34.2px;
+    --xl: 27.3px;
+    --lg: 21.9px;
+    --md: 17.5px;
+    --sm: 14px;
+    --xs: 11.2px;
+    /* Type Weight */
+    --extrabold: 800;
+    --bold: 700;
+    --semiBold: 500;
+    --regular: 200;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+  
+body {
+    font-family: 'Gilroy', sans-serif;
+    
+    background-color: var(--primary6);
+    padding-inline: 177px;
+    padding-top: 177px;
+    
+}
+
+
+h1, h2, h3, h4, h5, h6, p, .title {
+    color: var(--primary1);
+}
+
+h1 {
+    font-size: var(--xxl);
+    font-weight: var(--extrabold);
+}
+
+h2 {
+    font-size: var(--xl);
+    font-weight: var(--semiBold);
+    color: var(--primary2);
+    
+}
+.subhead {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+}
+
+h3 {
+    font-size: var(--lg);
+    font-weight: var(--bold);
+    color: var(--primary2);
+}
+
+h4 {
+    font-size: var(--md);
+    font-weight: var(--semiBold);
+    color: var(--primary2);
+}
+
+p {
+    font-size: var(--sm);
+    font-weight: var(--regular);
+    color: var(--primary2);
+}
+.title {
+    font-weight: var(--bold);
+    font-size: var(--title);
+}
+
+
+
+button {
+font-family: 'gilroy';
+font-size: var(--sm);
+color: var(--white);
+display: inline-flex;
+padding: 16px 24px;
+align-items: center;
+gap: 11px;
+border-radius: 10px;
+border-color: transparent;
+background: var(--primary3);
+cursor: pointer;
+transition: 0.3s;
+}
+
+button:hover {
+    background: var(--primary4);
+    border-color: transparent;
+    transition: 0.5 s;
+    
+}
+button:active {
+    background: var(--primary3);
+    border: 4px solid;
+    border-color: var(--primary4);
+    transition: 1 s;
+    mask-border-mode: dark;
+    
+
+}
+
+.secondaryButton {
+    font-size: var(--sm);
+    color: var(--primary1);
+    display: inline-flex;
+    padding: 16px 24px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border-color: transparent;
+    background: var(--primary7);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.secondaryButton:hover {
+    background: var(--primary5);
+    border-color: transparent;
+    transition: 0.5s;
+}
+.secondaryButton:active {
+    background: var(--primary5);
+    
+    border-color:rgba(174, 131, 158, 0.2);
+    border: 1.5px solid var(--primary-swatch-f-1-dce-9, #F1DCE9);
+    box-shadow: var(--buttonshadow);
+}
+
+a {
+    color: var(--white);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.card-button {
+    
+    font-size: var(--sm);
+    color: var(--white);
+    display: inline-flex;
+    padding: 16px 24px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border-color: transparent;
+    background: var(--primary3);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card-button:hover {
+    background: var(--primary4);
+    border-color: transparent;
+    transition: 0.5s;
+    
+}
+.card-button:active {
+    background: var(--primary3);
+    border: 4px solid;
+    border-color:rgba(174, 131, 158, 0.2);
+}
+
+
+#navigation {
+    background-color: var(--primary3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    z-index: 1;
+    }
+
+.buttonList {
+    padding-inline: 177px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-block: 10px;
+    }
+
+#Header {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items:flex-start;
+    
+    }
+    
+.header {
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.qoute {
+    background-color: var(--white);
+    display: flex;
+    width:auto;
+    padding: 32px 68px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px 10px;
+    background: var(--white);
+    /* Dak Shadow */
+    box-shadow: var(--darkshadow);
+    flex-direction: column;
+    justify-content: center;
+    font-size: var(--xxl);
+    font-weight: var(--extrabold);
+    padding-inline: 177px;
+    margin-top: 50px;
+}
+.success {
+    display: flex;
+flex-direction: column;
+justify-content: center;
+flex: 1 0 0;
+
+}
+
+#Aboutme {
+text-align: center;
+align-content: center;
+display: flex;
+width: 100%;
+flex-direction: column;
+justify-content: center;
+flex-shrink: 0;
+padding-top: 36px;
+}
+
+.logo {       
+        width: 422px;
+}
+
+#Discover {
+text-align: center;
+align-content: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+padding-top: 36px;
+flex-wrap: wrap;
+gap: 50px;
+}
+
+
+
+.menuDesigns {
+
+border-bottom: 1px solid var(--primary4);
+flex-grow: 1;
+
+}
+
+.card {
+display: flex;
+padding: 30px 20px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 15px;
+flex: 1 0 0;
+border-radius: 20px;
+background: var(--white);
+/* Light Shadow */
+box-shadow: var(--lightshadow);
+transition: all 300ms;
+
+}
+
+.card:hover {
+    box-shadow: var(--darkshadow);
+    transform: scale(1.1);
+
+}
+
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.imgCard {
+    width: 250;
+    height: 150px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/**
+<!--flip card 3 -->
+**/
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+
+.flip-card {
+    background-color: transparent;
+    width: 355px;
+    height: 281px;
+    flex-grow: 1;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+
+ }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    border-radius: 20px;
+    background: var(--white);
+    /* Light Shadow */
+    box-shadow: var(--lightshadow);
+
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg) scale(1);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color:var(--white);
+    color:var(--primary1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color:var(--primary4);
+    color: var(--white);
+    transform: rotateY(180deg) scale(1.1);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: var(--darkshadow);
+    
+  }
+
+#ContactMe {
+    text-align: center;
+    align-content: center;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    padding-top: 36px;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.flips {
+    align-content: center;
+    display:flex;
+    justify-items: stretch;
+    justify-content: center;
+   
+    flex-wrap: wrap;
+}
+input[type="text"] {
+    background-image: url('IconSakura.png');
+    display: inline-flex;
+    padding: 16px 24px;
+    align-items: center;
+    gap: 11px;
+    border-radius: 10px;
+    border: 2px solid var(--white);
+    background: var(--white);
+    color: var(--secondary2);
+    outline: none;
+    font-family: 'gilroy';
+    font-size: var(--sm);
+    color: var(--primary2);
+    flex-grow: 1;
+    
+
+}
+input[type="text"]:hover {
+    border: 2px solid var(--primary4);
+    transition: 0.3s;
+    
+}
+
+input[type="text"]:focus {
+    
+    border: 2px solid var(--primary3);
+    transition: 0.3s;
+}
+::placeholder {
+    color: var(--secondary5);
+  }
+
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    
+
+  }
+
+ #form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    
+
+  }
+/*input fields
+  #Footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    margin-top: -250px;
+    z-index:0;
+  }
+  */
+  #Footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    margin-bottom: -10px;
+  }
+/*input fields*/
+
+  .input-icons i {
+    position: absolute;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+  
+.input-icons {
+    width: 100%;
+
+}
+.icon {
+    padding: 16px;
+    min-width: 50px;
+    text-align: center;
+}
+
+.input-field {
+    width: 100%;
+    text-indent:40px;
+    
+}
+
+@media only screen and (max-width: 600px) {
+    #navigation {
+        background-color: var(--primary3);
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        overflow-x:auto;
+        
+        }
+        .buttonList {
+            padding-inline: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+            padding-block: 0px;
+            
+            }
+
+        body {
+            padding-top: 24px;
+            padding-inline: 24px;
+        }
+
+        .logo {       
+            width: 260px;
+            
+    }
+        
+    #Header {
+margin-block: 100px;
+        text-align: center;
+align-content: center;
+display: flex;
+flex-direction: column-reverse;
+width: 100%;
+justify-content: center;
+flex-shrink: 0;
+
+gap: 11px;
+        
+    }
+    .header {
+        width: 100%;
+        display:flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+    }
+    .qoute {
+        
+        padding: 8px 16px;
+        
+        padding-inline: 24px;
+        margin-top: 50px;
+    }
+    .success {
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0 0;
+    
+    }
+    .input-field {
+        width: 90%;
+        text-indent:40px;
+        
+    }
+
+  }
+
+  @media only screen and (max-width: 1140px) {
+    
+ 
+    body {
+        padding-top: 64px;
+        padding-inline: 177px;
+    }
+        .logo {       
+            width: 260px;
+            
+    }
+        
+    #Header {
+margin-block: 100px;
+        text-align: center;
+align-content: center;
+display: flex;
+flex-direction: column-reverse;
+width: 100%;
+justify-content: center;
+flex-shrink: 0;
+
+gap: 11px;
+        
+    }
+    .header {
+        width: 100%;
+        display:flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+    }
+    .qoute {
+        
+        padding: 16px 48px;
+        
+        padding-inline: 48px;
+        margin-top: 50px;
+    }
+    .success {
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0 0;
+    
+    }
+    .input-field {
+        width: 90%;
+        text-indent:40px;
+        
+    }
+
+  }
