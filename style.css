@@ -42,7 +42,10 @@
 
 html {
     scroll-behavior: smooth;
+    cursor: url('img/Crusor.png'), auto;
+    scroll-behavior: smooth;
   }
+
   
 body {
     font-family: 'Gilroy', sans-serif;
@@ -53,6 +56,62 @@ body {
     
 }
 
+.DailyGame {
+    background-color: var(--primary1);
+    
+    padding-inline: 0;
+    margin: 0;
+    display: block;
+    padding-top: 0;
+    
+    
+}
+.GameHeader {
+    justify-content: space-between;
+    display: flex;
+}
+.coffee {
+    top: 0;
+    left: 0;
+}
+
+.bread {
+    top: 0;
+    right: 0;
+}
+
+.dailyGameTitle {
+    padding-top: 177px;
+}
+
+.board {
+    display: flex;
+    justify-content:center;
+    transform: translateY(-300px);
+
+}
+
+
+.peices {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    transform: translateY(-40px);
+}
+
+label {
+    color: var(--white);
+}
+
+.flipButtons {
+    display: block;
+    align-content: center;
+    justify-content: center;
+    top: 20%;
+    position: fixed;
+    transform: scale(70%);
+    
+}
 
 h1, h2, h3, h4, h5, h6, p, .title {
     color: var(--primary1);
@@ -212,12 +271,24 @@ a {
     padding-block: 10px;
     }
 
+    @keyframes fade-animation-name {
+        0% {
+        transform: translateY(20px);
+        opacity: 0;
+        }
+      
+        100% {
+            transform: translateY(0px);
+          opacity: 1;
+        }
+      }
+
 #Header {
     display: flex;
     width: 100%;
     flex-direction: row;
     align-items:flex-start;
-    
+    animation: fade-animation-name 1s linear  forwards ;
     }
     
 .header {
@@ -243,14 +314,29 @@ a {
     font-weight: var(--extrabold);
     padding-inline: 177px;
     margin-top: 50px;
+    
 }
 .success {
     display: flex;
 flex-direction: column;
 justify-content: center;
-flex: 1 0 0;
 
 }
+
+#elementEl::after {
+    content: '|';
+    margin-left: 5px;
+    animation: blink 0.7s infinite;
+  }
+  
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
 
 #Aboutme {
 text-align: center;
@@ -261,6 +347,8 @@ flex-direction: column;
 justify-content: center;
 flex-shrink: 0;
 padding-top: 36px;
+animation: fade-animation-name 1s linear forwards ;
+
 }
 
 .logo {       
@@ -276,8 +364,8 @@ justify-content: center;
 padding-top: 36px;
 flex-wrap: wrap;
 gap: 50px;
+animation: fade-animation-name 1s linear forwards;
 }
-
 
 
 .menuDesigns {
@@ -584,7 +672,7 @@ gap: 11px;
  
     body {
         padding-top: 64px;
-        padding-inline: 177px;
+        
     }
         .logo {       
             width: 260px;
@@ -624,6 +712,9 @@ gap: 11px;
     flex-direction: column;
     justify-content: center;
     flex: 1 0 0;
+
+        
+
     
     }
     .input-field {

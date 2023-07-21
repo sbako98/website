@@ -121,10 +121,12 @@
             <br>A Computer science graduate student from King Abdul-Aziz University. Have experiences in UI/UX Design, Front-end Design Machine Learning, Graphic Design, Illustration and Digital Art. Love to try and discover new experiences.</br>
 
             <div class="qoute">
-                <h3 class="sucess">“Success is a journey, not a destination. Happiness is to be found along the road, not at the end of the way!</h3>
+                <h3 id="elementEl" class="sucess">“Success is a journey, not a destination. Happiness is to be found along the road, not at the end of the way!</h3>
             </div>
 
         </div>
+
+        
 
         <!-- Discover My Work -->
         <div id="Discover" class="row p-5">
@@ -531,6 +533,24 @@
         </div>
 
     </div>
+
+    <script>
+        'use strict';
+
+        function typeWriter(el) {
+            const textArray = el.innerHTML.split('');
+            el.innerHTML = '';
+            textArray.forEach((letter, i) =>
+                setTimeout(() => (el.innerHTML += letter), 95 * i)
+            );
+
+            setInterval(() => typeWriter(el), 13000);
+        }
+
+        typeWriter(elementEl);
+
+        </script>
+    
 
 </body>
 
